@@ -3,7 +3,7 @@ CREATE TABLE accounts (
     first_name varchar(50) NOT NULL,
     last_name varchar(50) NOT NULL,
     username varchar(50) NOT NULL UNIQUE,
-    password varchar(50) NOT NULL,
+    pass_word varchar(50) NOT NULL,
     email varchar(50) NOT NULL UNIQUE,
     num_of_trades bigint DEFAULT 0,
     total_deposit bigint DEFAULT 0,
