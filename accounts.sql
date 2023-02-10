@@ -2,7 +2,6 @@ CREATE TABLE accounts (
     user_id bigint NOT NULL UNIQUE,
     first_name varchar(50) NOT NULL,
     last_name varchar(50) NOT NULL,
-    ssn bigint NOT NULL UNIQUE,
     username varchar(50) NOT NULL,
     pass_word varchar(50) NOT NULL,
     email varchar(50) NOT NULL,
