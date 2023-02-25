@@ -14,5 +14,5 @@ CREATE TABLE accounts (
     current_bal NUMERIC(1000,2) DEFAULT 0.00,
     net_profit NUMERIC(1000,2) DEFAULT 0.00,
     PRIMARY KEY (user_id),
-    CHECK (net_profit = currBal + total_withdrawn - total_deposit)
+    CHECK (net_profit = current_bal + total_withdrawn - total_deposit)
 );
