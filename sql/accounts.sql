@@ -4,6 +4,7 @@ CREATE TABLE accounts (
     user_id bigint NOT NULL DEFAULT nextval('account_seq'),
     first_name varchar(50) NOT NULL,
     last_name varchar(50) NOT NULL,
+    ssn int NOT NULL UNIQUE,
     username varchar(50) NOT NULL UNIQUE,
     pass_word varchar(50) NOT NULL,
     email varchar(50) NOT NULL UNIQUE,
