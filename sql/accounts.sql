@@ -9,10 +9,10 @@ CREATE TABLE accounts (
     pass_word varchar(50) NOT NULL,
     email varchar(50) NOT NULL UNIQUE,
     num_of_trades bigint DEFAULT 0,
-    total_deposit bigint DEFAULT 0,
-    total_withdrawn bigint DEFAULT 0,
-    current_bal bigint DEFAULT 0,
-    net_profit bigint DEFAULT 0,
+    total_deposit NUMERIC(1000,2) DEFAULT 0.00,
+    total_withdrawn NUMERIC(1000,2) DEFAULT 0.00,
+    current_bal NUMERIC(1000,2) DEFAULT 0.00,
+    net_profit NUMERIC(1000,2) DEFAULT 0.00,
     PRIMARY KEY (user_id),
     CHECK (net_profit = currBal + total_withdrawn - total_deposit)
 );
