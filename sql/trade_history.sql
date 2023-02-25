@@ -10,5 +10,7 @@ CREATE TABLE trade_history (
     buy boolean NOT NULL,
     date_purchase date NOT NULL,
     PRIMARY KEY (trade_id),
-    FOREIGN KEY (user_id) REFERENCES accounts(user_id) ON DELETE CASCADE
+    FOREIGN KEY (user_id) REFERENCES accounts(user_id),
+    FOREIGN KEY (asset_id) REFERENCES assets(asset_id),
+    FOREIGN KEY (asset_name) REFERENCES assets(asset_name)
 );
