@@ -1,5 +1,7 @@
+CREATE SEQUENCE portfolio_history_seq start with 1;
+
 CREATE TABLE portfolio_history (
-    portfolio_history_id bigint NOT NULL UNIQUE,
+    portfolio_history_id bigint NOT NULL DEFAULT nextval('portfolio_history_seq'),
     user_id bigint NOT NULL;
     currBal bigint NOT NULL,
     date_balance date NOT NULL,

@@ -1,5 +1,7 @@
+CREATE SEQUENCE account_seq start with 1; 
+
 CREATE TABLE accounts (
-    user_id bigint NOT NULL UNIQUE,
+    user_id bigint NOT NULL DEFAULT nextval('account_seq'),
     first_name varchar(50) NOT NULL,
     last_name varchar(50) NOT NULL,
     username varchar(50) NOT NULL UNIQUE,

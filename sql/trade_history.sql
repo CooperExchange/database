@@ -1,5 +1,7 @@
+CREATE SEQUENCE trade_seq start with 1;
+
 CREATE TABLE trade_history (
-    trade_id bigint NOT NULL UNIQUE;
+    trade_id bigint NOT NULL DEFAULT nextval('trade_seq'),
     user_id bigint NOT NULL,
     asset_id bigint NOT NULL,
     asset_name varchar(15) NOT NULL;
