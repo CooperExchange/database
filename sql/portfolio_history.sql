@@ -6,5 +6,5 @@ CREATE TABLE portfolio_history (
     currBal bigint NOT NULL,
     date_balance date NOT NULL,
     PRIMARY KEY (portfolio_history_id),
-    FOREIGN KEY (user_id) REFERENCES accounts(user_id)   
+    FOREIGN KEY (user_id) REFERENCES accounts(user_id) ON DELETE CASCADE  
 );

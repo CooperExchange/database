@@ -7,5 +7,5 @@ CREATE TABLE portfolio (
     asset_name varchar(15) NOT NULL,
     shares bigint NOT NULL,
     PRIMARY KEY (portfolio_id),
-    FOREIGN KEY (user_id) REFERENCES accounts(user_id)   
+    FOREIGN KEY (user_id) REFERENCES accounts(user_id) ON DELETE CASCADE  
 );
