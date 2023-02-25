@@ -4,7 +4,7 @@ CREATE TABLE trade_history (
     trade_id bigint NOT NULL DEFAULT nextval('trade_seq'),
     user_id bigint NOT NULL,
     asset_id bigint NOT NULL,
-    asset_name varchar(15) NOT NULL;
+    asset_name varchar(15) NOT NULL,
     unit_price bigint NOT NULL,
     shares bigint NOT NULL,
     buy boolean NOT NULL,
