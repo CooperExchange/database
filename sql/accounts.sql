@@ -7,5 +7,5 @@ CREATE TABLE accounts (
     email varchar(50) NOT NULL UNIQUE,
     total_deposit NUMERIC(1000,2) DEFAULT 0.00,
     total_withdrawal NUMERIC(1000,2) DEFAULT 0.00,
-    remaining_cash NUMERIC(1000,2) DEFAULT 0.00,
+    remaining_cash NUMERIC(1000,2) DEFAULT 0.00
 );
