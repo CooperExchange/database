@@ -36,7 +36,7 @@ CREATE TABLE accounts (
     email varchar(50) NOT NULL UNIQUE,
     total_deposit NUMERIC(1000,2) DEFAULT 0.00,
     total_withdrawal NUMERIC(1000,2) DEFAULT 0.00,
-    remaining_cash NUMERIC(1000,2) DEFAULT 0.00,
+    remaining_cash NUMERIC(1000,2) DEFAULT 0.00
 );
 
 CREATE TABLE trades (
@@ -56,14 +56,14 @@ CREATE TABLE portfolios (
     asset_symbol varchar(50)      NOT NULL,
     user_id      bigint           NOT NULL,
     asset_name   varchar(50)      NOT NULL,
-    asset_count  NUMERIC(1000, 2) NOT NULL,  
+    asset_count  NUMERIC(1000, 2) NOT NULL
 );
 
 CREATE TABLE portfolio_history (
     portfolio-history_id SERIAL PRIMARY KEY,
     user_id      bigint           NOT NULL,
     portfolio_value NUMERIC(1000,2) NOT NULL,
-    date_balance DATE DEFAULT CURRENT_DATE,
+    date_balance DATE DEFAULT CURRENT_DATE
 );
 
 
