@@ -42,7 +42,7 @@ CREATE TABLE accounts (
 CREATE TABLE trades (
     trade_id       SERIAL PRIMARY KEY,
     trade_type     varchar(50)      NOT NULL,
-    trade_date     DATE DEFAULT CURRENT_DATE,
+    trade_date     TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     user_id        bigint           NOT NULL,
     asset_symbol   varchar(50)      NOT NULL,
     asset_name     varchar(50)      NOT NULL,
@@ -65,7 +65,7 @@ CREATE TABLE portfolio_history (
     portfolio_history_id SERIAL PRIMARY KEY,
     user_id      bigint           NOT NULL,
     portfolio_value NUMERIC(1000,2) NOT NULL,
-    date_balance DATE DEFAULT CURRENT_DATE
+    date_balance TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 
