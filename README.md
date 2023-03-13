@@ -68,6 +68,15 @@ CREATE TABLE portfolio_history (
     date_balance TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE TABLE assets (
+    asset_id SERIAL PRIMARY KEY,
+    asset_symbol   varchar(50)      NOT NULL,
+    asset_name     varchar(50)      NOT NULL,
+    asset_category varchar(50)      NOT NULL,
+    asset_price NUMERIC(1000,2) NOT NULL,
+    date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
 
 ## Useful Tips
 
