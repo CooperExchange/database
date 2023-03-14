@@ -34,9 +34,9 @@ CREATE TABLE accounts (
     username varchar(50) NOT NULL UNIQUE,
     pass_word varchar(50) NOT NULL,
     email varchar(50) NOT NULL UNIQUE,
-    total_deposit NUMERIC(1000,2) DEFAULT 0.00,
-    total_withdrawal NUMERIC(1000,2) DEFAULT 0.00,
-    remaining_cash NUMERIC(1000,2) DEFAULT 0.00
+    total_deposit NUMERIC(1000,4) DEFAULT 0.00,
+    total_withdrawal NUMERIC(1000,4) DEFAULT 0.00,
+    remaining_cash NUMERIC(1000,4) DEFAULT 0.00
 );
 
 CREATE TABLE trades (
@@ -47,8 +47,8 @@ CREATE TABLE trades (
     asset_symbol   varchar(50)      NOT NULL,
     asset_name     varchar(50)      NOT NULL,
     asset_category varchar(50)      NOT NULL,
-    asset_price    NUMERIC(1000, 2) NOT NULL,
-    asset_count    NUMERIC(1000, 2) NOT NULL,
+    asset_price    NUMERIC(1000, 4) NOT NULL,
+    asset_count    NUMERIC(1000, 4) NOT NULL,
     total_price    numeric GENERATED ALWAYS AS (asset_price * asset_count) STORED
 );
 
@@ -58,7 +58,7 @@ CREATE TABLE portfolios (
     user_id        bigint           NOT NULL,
     asset_name     varchar(50)      NOT NULL,
     asset_category varchar(50)      NOT NULL,
-    asset_count    NUMERIC(1000, 2) NOT NULL
+    asset_count    NUMERIC(1000, 4) NOT NULL
 );
 
 CREATE TABLE portfolio_history (
@@ -72,7 +72,8 @@ CREATE TABLE assets (
     asset_symbol   varchar(50)      NOT NULL,
     asset_name     varchar(50)      NOT NULL,
     asset_category varchar(50)      NOT NULL,
-    asset_price NUMERIC(1000,2) NOT NULL,
+    asset_price NUMERIC(1000,4) NOT NULL,
+    asset_market_cap NUMERIC(1000,4) NOT NULL,
     date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
