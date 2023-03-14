@@ -69,7 +69,6 @@ CREATE TABLE portfolio_history (
 );
 
 CREATE TABLE assets (
-    asset_id SERIAL PRIMARY KEY,
     asset_symbol   varchar(50)      NOT NULL,
     asset_name     varchar(50)      NOT NULL,
     asset_category varchar(50)      NOT NULL,
